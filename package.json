@@ -1,6 +1,6 @@
 {
   "name": "@dcx-protocol/root",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "DCX: Decentralized Credential Exchange. DWN protocol for verifiable credential exchange.",
   "type": "module",
   "workspaces": [
@@ -12,9 +12,10 @@
     "clean": "pnpm npkill -d $(pwd)/packages -t dist && pnpm npkill -d $(pwd) -t node_modules",
     "build": "pnpm --recursive --stream build",
     "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint",
+    "lint:fix": "pnpm --recursive lint:fix",
     "workflow": "pnpm install --frozen-lockfile && pnpm build && pnpm test",
-    "version": "tsx scripts/version.ts",
-    "publish": "tsx scripts/publish.ts"
+    "version": "tsx scripts/version.ts"
   },
   "repository": {
     "type": "git",
